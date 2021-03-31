@@ -1,5 +1,5 @@
 <template>
-  <div class="container">Main page</div>
+  <div>Contact Page</div>
 </template>
 
 <script>
