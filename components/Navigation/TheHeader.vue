@@ -24,21 +24,24 @@ export default {}
   top: 0;
   left: 0;
 
+  display: flex;
+  align-items: center;
+
   height: 60px;
   width: 100vw;
 
   padding: 0 20px;
 
-  display: flex;
-  align-items: center;
+  z-index: 20; // Navigation's z-index: 20-30
 
   &--logo {
     font-size: 1.5rem;
+    font-weight: bold;
   }
 
   &--logo a {
     text-decoration: none;
-    color: black;
+    color: white;
   }
 
   &--spacer {
@@ -59,7 +62,7 @@ export default {}
 
   &--listitem a {
     text-decoration: none;
-    color: black;
+    color: white;
   }
 
   &--listitem a:hover,
