@@ -1,10 +1,51 @@
 <template>
   <div>
+    <header class="header">
+      <div class="header--logo">
+        <nuxt-link to="/">목멱성</nuxt-link>
+      </div>
+      <div class="header--spacer"></div>
+      <div class="header--categories">
+        <ul class="header--list">
+          <li class="header--listitem">
+            <nuxt-link to="/recruit">Recruit</nuxt-link>
+          </li>
+        </ul>
+      </div>
+    </header>
+
     <Nuxt />
+
+    <footer class="footer">
+      <ul class="footer--author">
+        <li class="footer--author-info">
+          <strong>Developer</strong> Junyoung Yang
+        </li>
+        <li class="footer--author-info">
+          <strong>Report</strong>
+          <a
+            href="mailto:catfishdev9601@gmail.com?subject=[목멱성 소개페이지] 버그 리포트입니다."
+            target="_blank"
+            >버그 리포트 작성</a
+          >
+        </li>
+        <li class="footer--author-info">
+          <strong>Open Source</strong>
+          <a href="https://github.com/tom9744/MMS-Recruit" target="_blank"
+            >Github Repository</a
+          >
+        </li>
+      </ul>
+
+      <div class="footer--copyright">
+        <p><strong>Copyright</strong> © Junyoung Yang 2021.</p>
+        <p>All rights reserved.</p>
+      </div>
+    </footer>
   </div>
 </template>
 
-<style>
+<style lang="scss">
 html {
   /* font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif; */
@@ -23,34 +64,87 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 60px;
+  width: 100vw;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+
+  &--logo {
+    font-size: 1.5rem;
+  }
+
+  &--logo a {
+    text-decoration: none;
+    color: black;
+  }
+
+  &--spacer {
+    flex: 1;
+  }
+
+  &--categories {
+  }
+
+  &--list {
+    list-style: none;
+    display: flex;
+  }
+
+  &--listitem {
+    margin: 0 10px;
+  }
+
+  &--listitem a {
+    text-decoration: none;
+    color: black;
+  }
+
+  &--listitem a:hover,
+  &--listitem a:active,
+  &--listitem a.nuxt-link-active {
+    color: red;
+  }
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.footer {
+  height: 200px;
+  width: 100vw;
+
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  &--author {
+    list-style: none;
+  }
+
+  &--author a {
+    text-decoration: none;
+    color: black;
+  }
+
+  &--copyright {
+    text-align: center;
+  }
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+@media screen and (min-width: 780px) {
+  .footer {
+    flex-direction: row;
+  }
 }
 </style>
