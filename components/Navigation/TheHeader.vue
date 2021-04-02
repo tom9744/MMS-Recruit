@@ -32,7 +32,13 @@ export default {}
 
   padding: 0 20px;
 
-  z-index: 20; // Navigation's z-index: 20-30
+  background-color: rgba(0, 0, 0, 0.25);
+
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 2.5px 10px -2.5px black;
+
+  /* Navigation's z-index: 20-30 */
+  z-index: 20;
 
   &--logo {
     font-size: 1.5rem;
