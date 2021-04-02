@@ -1,10 +1,6 @@
 <template>
   <div class="container">
-    <section class="carousel">
-      <h1 class="carousel--text">
-        신새벽의 벅찬 가슴으로 민중의 새날을 노래하는 공과대 노래패, 목멱성
-      </h1>
-    </section>
+    <Carousel />
 
     <section class="main-section">
       <article class="content">
@@ -226,25 +222,16 @@
 </template>
 
 <script>
-export default {}
+import Carousel from '~/components/Carousel/Carousel'
+
+export default {
+  components: {
+    Carousel,
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-.carousel {
-  height: 100vh;
-  width: 100vw;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: gainsboro;
-
-  &--text {
-    padding: 0 20%;
-  }
-}
-
 .main-section {
   width: 100vw;
 
@@ -368,10 +355,6 @@ export default {}
 }
 
 @media screen and (min-width: 400px) {
-  .carousel {
-    height: 90vh;
-  }
-
   .main-section {
     padding: 25% 15%;
   }
@@ -391,10 +374,6 @@ export default {}
 }
 
 @media screen and (min-width: 780px) {
-  .carousel {
-    height: 80vh;
-  }
-
   .main-section {
     padding: 20% 20%;
   }
@@ -424,10 +403,6 @@ export default {}
 }
 
 @media screen and (min-width: 1080px) {
-  .carousel {
-    height: 70vh;
-  }
-
   .main-section {
     padding: 15% 20%;
   }
