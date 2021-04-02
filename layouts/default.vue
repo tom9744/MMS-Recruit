@@ -5,17 +5,21 @@
     <Nuxt />
 
     <TheFooter />
+
+    <TheScrollButton />
   </div>
 </template>
 
 <script>
 import TheHeader from '~/components/Navigation/TheHeader'
 import TheFooter from '~/components/Navigation/TheFooter'
+import TheScrollButton from '~/components/Navigation/TheScrollButton'
 
 export default {
   components: {
     TheHeader,
     TheFooter,
+    TheScrollButton,
   },
 }
 </script>
