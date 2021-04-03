@@ -107,7 +107,13 @@ export default {
 
   data() {
     return {
-      instruments: ['기타', '베이스', '드럼', '키보드', '아이맥', '앰프'],
+      instruments: [
+        { type: '기타', fileName: 'guitar.svg' },
+        { type: '전자기타', fileName: 'electric-guitar.svg' },
+        { type: '베이스', fileName: 'bass.svg' },
+        { type: '드럼', fileName: 'drums.svg' },
+        { type: '키보드', fileName: 'keyboard.svg' },
+      ],
 
       advantages: [
         {

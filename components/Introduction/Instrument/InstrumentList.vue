@@ -1,8 +1,11 @@
 <template>
   <ul class="instrument-list">
-    <Instrument v-for="(inst, idx) of instruments" :key="idx">
-      <p>{{ inst }}</p>
-    </Instrument>
+    <Instrument
+      v-for="(inst, idx) of instruments"
+      :key="idx"
+      :instrument-type="inst.type"
+      :file-name="inst.fileName"
+    />
   </ul>
 </template>
 
