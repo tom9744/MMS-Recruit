@@ -63,7 +63,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  layout: 'recruit',
+}
 </script>
 
 <style lang="scss" scoped>
