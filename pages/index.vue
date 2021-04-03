@@ -24,14 +24,7 @@
           분야를 포괄적으로 다루고 있습니다. 이에 필요한 다양한 악기와 음향
           장비를 자체 보유하고 있습니다.
         </template>
-        <ul class="content--list instruments">
-          <li class="content--list-item instruments--icon">기타</li>
-          <li class="content--list-item instruments--icon">베이스</li>
-          <li class="content--list-item instruments--icon">드럼</li>
-          <li class="content--list-item instruments--icon">키보드</li>
-          <li class="content--list-item instruments--icon">아이맥</li>
-          <li class="content--list-item instruments--icon">앰프</li>
-        </ul>
+        <InstrumentList :instruments="instruments" />
       </Content>
     </MainSection>
 
@@ -188,12 +181,20 @@
 import Carousel from '~/components/Carousel/Carousel'
 import MainSection from '~/components/Introduction/MainSection'
 import Content from '~/components/Introduction/Content'
+import InstrumentList from '~/components/Introduction/Instrument/InstrumentList'
 
 export default {
   components: {
     Carousel,
     MainSection,
     Content,
+    InstrumentList,
+  },
+
+  data() {
+    return {
+      instruments: ['기타', '베이스', '드럼', '키보드', '아이맥', '앰프'],
+    }
   },
 }
 </script>
