@@ -132,9 +132,15 @@
         </template>
 
         <ul class="content--list contact">
-          <li class="content--list-item contact--icon">Facebook</li>
-          <li class="content--list-item contact--icon">Instagram</li>
-          <li class="content--list-item contact--icon">Kakao Talk</li>
+          <li class="content--list-item contact--icon">
+            <AppIcon source="facebook.svg" alter="Facebook Icon" :size="32" />
+          </li>
+          <li class="content--list-item contact--icon">
+            <AppIcon source="instagram.svg" alter="Instagram Icon" :size="32" />
+          </li>
+          <li class="content--list-item contact--icon">
+            <AppIcon source="kakaotalk.svg" alter="KakaoTalk Icon" :size="32" />
+          </li>
         </ul>
       </Content>
     </MainSection>
@@ -148,6 +154,7 @@ import Content from '~/components/Introduction/Content'
 import InstrumentList from '~/components/Introduction/Instrument/InstrumentList'
 import AdvantageList from '~/components/Introduction/Advantage/AdvantageList'
 import AppIframe from '~/components/UI/AppIframe'
+import AppIcon from '~/components/UI/AppIcon'
 
 export default {
   components: {
@@ -157,6 +164,7 @@ export default {
     InstrumentList,
     AdvantageList,
     AppIframe,
+    AppIcon,
   },
 
   data() {
