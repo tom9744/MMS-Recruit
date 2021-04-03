@@ -1,11 +1,18 @@
 <template>
   <button class="scroll-btn" @click="scrollToTop">
-    <span class="scroll-btn--icon">위로</span>
+    <fa class="scroll-btn--icon" :icon="fas.faAngleDoubleUp" />
   </button>
 </template>
 
 <script>
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
 export default {
+  computed: {
+    fas() {
+      return fas
+    },
+  },
   methods: {
     scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -29,7 +36,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.25);
 
   &--icon {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: white;
   }
