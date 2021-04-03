@@ -107,22 +107,17 @@
     <MainSection>
       <Content>
         <template #title>Project</template>
-        <template #subtitle> 🔥 목멱성 활동 결과물을 확인해보세요!</template>
+        <template #subtitle> 🔥 활동 결과물을 확인해보세요!</template>
         <template #paragraph>
           목멱성은 매년 학관 앞 공연, 정기공연, 상시 외부공연을 통해 음악 활동을
           계속하고 있습니다. 또한 공연 실황을 촬영 및 편집하여 YouTube 등 채널에
           업로드하고 있습니다.
         </template>
-        <iframe
-          class="content--video"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/VoRaLXE5Dzw"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <AppIframe
+          source="https://www.youtube.com/embed/VoRaLXE5Dzw"
+          :style="{ marginBottom: '8px' }"
+        />
+        <AppIframe source="https://www.youtube.com/embed/C-qG-qdpGh4" />
       </Content>
     </MainSection>
 
@@ -152,6 +147,7 @@ import MainSection from '~/components/Introduction/MainSection'
 import Content from '~/components/Introduction/Content'
 import InstrumentList from '~/components/Introduction/Instrument/InstrumentList'
 import AdvantageList from '~/components/Introduction/Advantage/AdvantageList'
+import AppIframe from '~/components/UI/AppIframe'
 
 export default {
   components: {
@@ -160,6 +156,7 @@ export default {
     Content,
     InstrumentList,
     AdvantageList,
+    AppIframe,
   },
 
   data() {
@@ -168,7 +165,7 @@ export default {
 
       advantages: [
         {
-          subject: '🍻 완벽에 가까운 음주/학업 병행',
+          subject: '🍻 음주와 학업의 황금비율',
           description:
             '목멱성은 타의추종을 불허하는 술자리 문화를 꾸준히 가꿔오고 있습니다. 하지만 시험기간에는 동아리 내 스터디를 통해 전공 지식을 공유하는 등, 자율적으로 학업에 열중하는 분위기를 가지고 있습니다.',
         },
@@ -178,7 +175,7 @@ export default {
             '1993년 창립된 목멱성은 자유로운 선후배 문화를 토대로 30년 간 풍부한 OB 네트워크를 쌓아오고 있습니다. 사회의 다양한 분야에 진출하여 활동하고 계신 선배님들로부터 조언을 구할 수 있습니다.',
         },
         {
-          subject: '👨‍👩‍👧‍👦 다양한 배경의 동아리 구성원',
+          subject: '👨‍👩‍👧‍👦 다양한 학과로 구성',
           description:
             '본래 공과대학 소모임으로 시작한 목멱성은 전자전기공학과와 컴퓨터공학과 학우들을 위주로 구성되어 왔습니다. 하지만 최근 중앙 동아리로 전환하며, 공과대학을 벗어나 더욱 다양한 학과의 학우들로 구성되게 되었습니다.',
         },
