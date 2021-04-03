@@ -131,17 +131,7 @@
           함께하고 싶으시면, 아래의 채널을 통해 문의해주세요!
         </template>
 
-        <ul class="content--list contact">
-          <li class="content--list-item contact--icon">
-            <AppIcon source="facebook.svg" alter="Facebook Icon" :size="32" />
-          </li>
-          <li class="content--list-item contact--icon">
-            <AppIcon source="instagram.svg" alter="Instagram Icon" :size="32" />
-          </li>
-          <li class="content--list-item contact--icon">
-            <AppIcon source="kakaotalk.svg" alter="KakaoTalk Icon" :size="32" />
-          </li>
-        </ul>
+        <ContactList :contacts="contacts" />
       </Content>
     </MainSection>
   </div>
@@ -154,7 +144,7 @@ import Content from '~/components/Introduction/Content'
 import InstrumentList from '~/components/Introduction/Instrument/InstrumentList'
 import AdvantageList from '~/components/Introduction/Advantage/AdvantageList'
 import AppIframe from '~/components/UI/AppIframe'
-import AppIcon from '~/components/UI/AppIcon'
+import ContactList from '~/components/Introduction/Contact/ContactList'
 
 export default {
   components: {
@@ -164,7 +154,7 @@ export default {
     InstrumentList,
     AdvantageList,
     AppIframe,
-    AppIcon,
+    ContactList,
   },
 
   data() {
@@ -183,9 +173,36 @@ export default {
             '1993년 창립된 목멱성은 자유로운 선후배 문화를 토대로 30년 간 풍부한 OB 네트워크를 쌓아오고 있습니다. 사회의 다양한 분야에 진출하여 활동하고 계신 선배님들로부터 조언을 구할 수 있습니다.',
         },
         {
-          subject: '👨‍👩‍👧‍👦 다양한 학과로 구성',
+          subject: '👨‍👩‍👧‍👦 다양한 학과의 구성원',
           description:
             '본래 공과대학 소모임으로 시작한 목멱성은 전자전기공학과와 컴퓨터공학과 학우들을 위주로 구성되어 왔습니다. 하지만 최근 중앙 동아리로 전환하며, 공과대학을 벗어나 더욱 다양한 학과의 학우들로 구성되게 되었습니다.',
+        },
+      ],
+
+      contacts: [
+        {
+          link: 'https://www.facebook.com/groups/146570552120604',
+          icon: {
+            src: 'facebook.svg',
+            alter: 'Facebook Icon',
+            size: '32',
+          },
+        },
+        {
+          link: 'https://www.youtube.com/channel/UCW-Jungtim8fzkaC7uyjV4g',
+          icon: {
+            src: 'youtube.svg',
+            alter: 'YouTube Icon',
+            size: '32',
+          },
+        },
+        {
+          link: 'https://open.kakao.com/o/sQyQ8lUc',
+          icon: {
+            src: 'kakaotalk.svg',
+            alter: 'KakaoTalk Icon',
+            size: '32',
+          },
         },
       ],
     }
@@ -193,79 +210,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.instruments {
-  justify-content: center;
-
-  gap: 16px;
-  padding: 16px 0px;
-
-  &--icon {
-    margin: 0.5rem;
-    padding: 0.5rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    height: 100px;
-    width: 100px;
-
-    background-color: white;
-
-    border-radius: 50%;
-  }
-}
-
-.contact {
-  flex-wrap: nowrap;
-  justify-content: space-around;
-
-  padding: 16px 0px;
-
-  &--icon {
-    margin: 0.5rem;
-    padding: 0.5rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    height: 55px;
-    width: 55px;
-
-    background-color: white;
-
-    border-radius: 50%;
-  }
-}
-
-@media screen and (min-width: 400px) {
-  .contact {
-    &--icon {
-      height: 70px;
-      width: 70px;
-    }
-  }
-}
-
-@media screen and (min-width: 780px) {
-  .contact {
-    &--icon {
-      height: 85px;
-      width: 85px;
-    }
-  }
-}
-
-@media screen and (min-width: 1080px) {
-  .contact {
-    &--icon {
-      height: 100px;
-      width: 100px;
-    }
-  }
-}
-</style>
+<style lang="scss" scoped></style>

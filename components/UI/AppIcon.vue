@@ -1,9 +1,9 @@
 <template>
   <img
     :src="require(`@/assets/icons/${source}`)"
-    alt=""
-    height="32"
-    width="32"
+    :alt="alter"
+    :height="size"
+    :width="size"
   />
 </template>
 
