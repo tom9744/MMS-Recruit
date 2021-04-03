@@ -1,7 +1,9 @@
 <template>
   <header class="header">
     <div class="header--logo">
-      <nuxt-link to="/">목멱성</nuxt-link>
+      <nuxt-link to="/">
+        <img src="@/assets/logo.svg" alt="MMS Logo" height="40px" />
+      </nuxt-link>
     </div>
     <div class="header--spacer"></div>
     <div class="header--categories">
@@ -30,7 +32,7 @@ export default {}
   height: 60px;
   width: 100vw;
 
-  padding: 0 20px;
+  padding: 0 16px;
 
   background-color: rgba(0, 0, 0, 0.25);
 
@@ -41,13 +43,17 @@ export default {}
   z-index: 20;
 
   &--logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &--logo a {
     text-decoration: none;
-    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &--spacer {

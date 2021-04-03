@@ -40,7 +40,7 @@ export default {
         return {
           background:
             'linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(' +
-            require(`@/assets/${fileName}`) +
+            require(`@/assets/imgs/carousel/${fileName}`) +
             ')',
           backgroundSize: 'cover',
           backgroundPosition: 'center top',

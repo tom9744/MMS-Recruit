@@ -46,61 +46,7 @@
           진행하고 있습니다.
         </template>
 
-        <div>
-          <h4>3월 - 학관 앞 공연</h4>
-          <p>학생회관 앞에서 대규모의 버스킹 공연을 진행합니다.</p>
-          <figure>
-            <img src="" alt="" />
-          </figure>
-        </div>
-
-        <div>
-          <h4>4월 - MT</h4>
-          <p>선후배, OB까지 함께하는 MT를 진행합니다.</p>
-          <figure>
-            <img src="" alt="" />
-          </figure>
-        </div>
-
-        <div>
-          <h4>상시 - 소규모 소풍</h4>
-          <p>마음맞는 친구들과 한강공원 등으로 소풍을 갑니다.</p>
-          <figure>
-            <img src="" alt="" />
-          </figure>
-        </div>
-
-        <div>
-          <h4>5월 - 정기공연</h4>
-          <p>목멱성의 1년 행사 중 가장 중요한 정기공연입니다.</p>
-          <figure>
-            <img src="" alt="" />
-          </figure>
-        </div>
-
-        <div>
-          <h4>9월 - 창립제 / 체육대회</h4>
-          <p>목멱성 창립일을 기념하며, 체육대회를 진행합니다.</p>
-          <figure>
-            <img src="" alt="" />
-          </figure>
-        </div>
-
-        <div>
-          <h4>상시 - 외부공연</h4>
-          <p>홍대/신촌 인근 클럽을 대관하여, 외부공연을 진행합니다.</p>
-          <figure>
-            <img src="" alt="" />
-          </figure>
-        </div>
-
-        <div>
-          <h3>상시 - 족멱성</h3>
-          <p>풋살, 족구 등 구기종목을 사랑하는 사람들의 소모임입니다.</p>
-          <figure>
-            <img src="" alt="" />
-          </figure>
-        </div>
+        <ActivityList :activities="activities" />
       </Content>
     </MainSection>
 
@@ -143,6 +89,7 @@ import MainSection from '~/components/Introduction/MainSection'
 import Content from '~/components/Introduction/Content'
 import InstrumentList from '~/components/Introduction/Instrument/InstrumentList'
 import AdvantageList from '~/components/Introduction/Advantage/AdvantageList'
+import ActivityList from '~/components/Introduction/Activity/ActivityList'
 import AppIframe from '~/components/UI/AppIframe'
 import ContactList from '~/components/Introduction/Contact/ContactList'
 
@@ -155,6 +102,7 @@ export default {
     AdvantageList,
     AppIframe,
     ContactList,
+    ActivityList,
   },
 
   data() {
@@ -203,6 +151,40 @@ export default {
             alter: 'KakaoTalk Icon',
             size: '32',
           },
+        },
+      ],
+
+      activities: [
+        {
+          month: '3월',
+          name: '학관 앞 공연',
+          fileName: 'activity_1.jpeg',
+          description: '학생회관 앞에서 대규모의 버스킹 공연을 진행합니다.',
+        },
+        {
+          month: '4월',
+          name: '정기 MT',
+          fileName: 'activity_2.jpeg',
+          description: '선후배, OB까지 함께하는 MT를 진행합니다.',
+        },
+        {
+          month: '6월',
+          name: '정기 공연',
+          fileName: 'activity_3.jpeg',
+          description: '목멱성의 1년 행사 중 가장 중요한 정기공연입니다.',
+        },
+        {
+          month: '9월',
+          name: '창립제, 체육대회',
+          fileName: 'activity_4.jpeg',
+          description: '목멱성 창립일을 기념하며, 체육대회를 진행합니다.',
+        },
+        {
+          month: '상시',
+          name: '외부 공연',
+          fileName: 'activity_5.jpeg',
+          description:
+            '시기와 상관없이, 홍대/신촌 인근 클럽을 대관해 공연을 진행합니다.',
         },
       ],
     }
