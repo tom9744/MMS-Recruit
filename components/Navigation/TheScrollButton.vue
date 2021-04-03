@@ -31,13 +31,17 @@ export default {
   width: 48px;
 
   border: none;
+  outline: none;
   border-radius: 50%;
 
   background-color: rgba(0, 0, 0, 0.25);
 
+  cursor: pointer;
+
   &--icon {
     font-size: 1.5rem;
     font-weight: bold;
+
     color: white;
   }
 }
