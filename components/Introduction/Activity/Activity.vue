@@ -6,7 +6,8 @@
     @mouseover="onEnter"
     @mouseleave="onLeave"
   >
-    <h4 class="activity--name">{{ isHover ? name : month }}</h4>
+    <div v-if="!isHover" class="activity--overlay"></div>
+    <p class="activity--name">{{ isHover ? name : month }}</p>
   </li>
 </template>
 
@@ -48,7 +49,7 @@ export default {
     imageStyle() {
       return {
         background:
-          'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' +
+          'linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(' +
           require(`@/assets/imgs/activities/${this.fileName}`) +
           ')',
         backgroundSize: 'cover',
@@ -82,6 +83,8 @@ export default {
 
 <style lang="scss" scoped>
 .activity {
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,18 +92,34 @@ export default {
   height: 150px;
   width: 100%;
 
-  margin: 6px 0px;
-
-  color: white;
+  margin: 0.5rem 0;
+  padding: 1rem;
 
   opacity: 0;
 
   transition: opacity 0.75s ease-in;
 
+  &--overlay {
+    position: absolute;
+
+    background-color: rgba(65, 65, 190, 0.5);
+
+    height: 100%;
+    width: 100%;
+  }
+
+  &--name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+
+    text-align: center;
+
+    z-index: 5;
+  }
+
   &__visible {
     opacity: 1;
-
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
   }
 }
 
@@ -109,7 +128,7 @@ export default {
     height: 300px;
     width: auto;
 
-    margin: 0px 6px;
+    margin: 0 0.5rem;
 
     flex: 1;
   }
