@@ -32,57 +32,7 @@
       <Content>
         <template #title>Why MMS?</template>
 
-        <ul class="content--list advantage">
-          <li class="content--list-item">
-            <Card>
-              <template #header>
-                <h3>🍻 완벽에 가까운 음주/학업 병행</h3>
-              </template>
-
-              <template #main>
-                <p>
-                  목멱성은 타의추종을 불허하는 술자리 문화를 꾸준히 가꿔오고
-                  있습니다. 하지만 시험기간에는 동아리 내 스터디를 통해 전공
-                  지식을 공유하는 등, 자율적으로 학업에 열중하는 분위기를 가지고
-                  있습니다.
-                </p>
-              </template>
-            </Card>
-          </li>
-
-          <li class="content--list-item">
-            <Card>
-              <template #header>
-                <h3>💞 활발한 선후배 커뮤니티</h3>
-              </template>
-
-              <template #main>
-                <p>
-                  1993년 창립된 목멱성은 자유로운 선후배 문화를 토대로 30년 간
-                  풍부한 OB 네트워크를 쌓아오고 있습니다. 사회의 다양한 분야에
-                  진출하여 활동하고 계신 선배님들로부터 조언을 구할 수 있습니다.
-                </p>
-              </template>
-            </Card>
-          </li>
-
-          <li class="content--list-item">
-            <Card>
-              <template #header>
-                <h3>👨‍👩‍👧‍👦 다양한 배경의 동아리 구성원</h3>
-              </template>
-
-              <template #main>
-                <p>
-                  본래 공과대학 소모임으로 시작한 목멱성은 전자전기공학과와
-                  컴퓨터공학과 학우들을 위주로 구성되어 왔습니다. 하지만 최근
-                  중앙 동아리로 전환하며, 공과대학을 벗어나 더욱 다양한 학과의
-                  학우들로 구성되게 되었습니다.
-                </p>
-              </template>
-            </Card>
-          </li>
-        </ul>
+        <AdvantageList :advantages="advantages" />
       </Content>
     </MainSection>
 
@@ -201,7 +151,7 @@ import Carousel from '~/components/Carousel/Carousel'
 import MainSection from '~/components/Introduction/MainSection'
 import Content from '~/components/Introduction/Content'
 import InstrumentList from '~/components/Introduction/Instrument/InstrumentList'
-import Card from '~/components/Card/Card'
+import AdvantageList from '~/components/Introduction/Advantage/AdvantageList'
 
 export default {
   components: {
@@ -209,12 +159,30 @@ export default {
     MainSection,
     Content,
     InstrumentList,
-    Card,
+    AdvantageList,
   },
 
   data() {
     return {
       instruments: ['기타', '베이스', '드럼', '키보드', '아이맥', '앰프'],
+
+      advantages: [
+        {
+          subject: '🍻 완벽에 가까운 음주/학업 병행',
+          description:
+            '목멱성은 타의추종을 불허하는 술자리 문화를 꾸준히 가꿔오고 있습니다. 하지만 시험기간에는 동아리 내 스터디를 통해 전공 지식을 공유하는 등, 자율적으로 학업에 열중하는 분위기를 가지고 있습니다.',
+        },
+        {
+          subject: '💞 활발한 선후배 커뮤니티',
+          description:
+            '1993년 창립된 목멱성은 자유로운 선후배 문화를 토대로 30년 간 풍부한 OB 네트워크를 쌓아오고 있습니다. 사회의 다양한 분야에 진출하여 활동하고 계신 선배님들로부터 조언을 구할 수 있습니다.',
+        },
+        {
+          subject: '👨‍👩‍👧‍👦 다양한 배경의 동아리 구성원',
+          description:
+            '본래 공과대학 소모임으로 시작한 목멱성은 전자전기공학과와 컴퓨터공학과 학우들을 위주로 구성되어 왔습니다. 하지만 최근 중앙 동아리로 전환하며, 공과대학을 벗어나 더욱 다양한 학과의 학우들로 구성되게 되었습니다.',
+        },
+      ],
     }
   },
 }
@@ -241,24 +209,6 @@ export default {
     background-color: white;
 
     border-radius: 50%;
-  }
-}
-
-.advantage {
-  &--card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    padding: 10%;
-  }
-
-  &--title {
-    margin-bottom: 1rem;
-  }
-
-  &--paragraph {
   }
 }
 
@@ -297,16 +247,6 @@ export default {
 }
 
 @media screen and (min-width: 780px) {
-  .advantage {
-    flex-wrap: nowrap;
-
-    align-items: baseline;
-
-    &--card {
-      padding: 2.5%;
-    }
-  }
-
   .contact {
     &--icon {
       height: 85px;
