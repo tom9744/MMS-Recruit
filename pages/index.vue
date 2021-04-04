@@ -109,11 +109,15 @@ export default {
   data() {
     return {
       instruments: [
-        { type: '기타', fileName: 'guitar.svg' },
-        { type: '전자기타', fileName: 'electric-guitar.svg' },
-        { type: '베이스', fileName: 'bass.svg' },
-        { type: '드럼', fileName: 'drums.svg' },
-        { type: '키보드', fileName: 'keyboard.svg' },
+        { type: '기타', fileName: 'guitar.svg', soundFile: 'acoustic.wav' },
+        {
+          type: '전자기타',
+          fileName: 'electric-guitar.svg',
+          soundFile: 'electric.wav',
+        },
+        { type: '베이스', fileName: 'bass.svg', soundFile: 'bass.wav' },
+        { type: '드럼', fileName: 'drums.svg', soundFile: 'drums.wav' },
+        { type: '키보드', fileName: 'keyboard.svg', soundFile: 'keyboard.wav' },
       ],
 
       advantages: [
