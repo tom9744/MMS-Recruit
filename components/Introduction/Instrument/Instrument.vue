@@ -6,7 +6,7 @@
   >
     <img
       class="instrument--icon"
-      :src="require(`@/assets/imgs/instruments/${fileName}`)"
+      :src="require(`@/assets/imgs/instruments/${imageFileName}`)"
       :alt="instrumentType"
     />
   </li>
@@ -19,7 +19,11 @@ export default {
       type: String,
       required: true,
     },
-    fileName: {
+    imageFileName: {
+      type: String,
+      required: true,
+    },
+    soundFileName: {
       type: String,
       required: true,
     },
@@ -33,14 +37,8 @@ export default {
     }
   },
 
-  computed: {
-    audioFilePath() {
-      return `${this.fileName.split('.')[0]}.wav`
-    },
-  },
-
   mounted() {
-    const soundFile = require(`@/assets/sounds/${this.audioFilePath}`)
+    const soundFile = require(`@/assets/sounds/${this.soundFileName}`)
     const audio = new Audio(soundFile.default)
     audio.onplaying = () => {
       this.isPlaying = true

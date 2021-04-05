@@ -4,7 +4,8 @@
       v-for="(inst, idx) of instruments"
       :key="idx"
       :instrument-type="inst.type"
-      :file-name="inst.fileName"
+      :image-file-name="inst.fileName"
+      :sound-file-name="inst.soundFile"
     />
   </ul>
 </template>
