@@ -4,14 +4,19 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'mms-recruit',
+    title: '동국대학교 목멱성',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'ko',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'Global Description',
+        name: 'description',
+        content:
+          '동국대학교 밴드 동아리 목멱성에 대한 소개글과 가입신청에 관련된 내용을 포함한 웹 페이지입니다..',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

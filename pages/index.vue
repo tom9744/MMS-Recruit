@@ -200,6 +200,21 @@ export default {
       ],
     }
   },
+
+  head() {
+    return {
+      title: '동국대학교 목멱성 | Home',
+
+      meta: [
+        {
+          hid: 'Home Page',
+          name: 'description',
+          content:
+            '동국대학교 밴드 음악 동아리 목멱성 소개 페이지입니다. 목멱성의 연간 활동 일정과 연락처 등을 찾아볼 수 있습니다.',
+        },
+      ],
+    }
+  },
 }
 </script>
 
