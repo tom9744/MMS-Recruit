@@ -36,8 +36,6 @@ export default {
   align-items: center;
   justify-content: center;
 
-  padding: 0;
-
   &--listitem {
     width: 100%;
 

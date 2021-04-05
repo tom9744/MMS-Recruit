@@ -3,7 +3,7 @@
     <li
       v-for="(advantage, idx) of advantages"
       :key="idx"
-      class="advantage-list--item"
+      class="advantage-list--listitem"
     >
       <Card>
         <template #header>
@@ -40,22 +40,27 @@ export default {
   list-style: none;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
 
-  gap: 16px;
+  &--listitem {
+    width: 100%;
+
+    margin: 0.5rem 0;
+  }
 }
 
 @media screen and (min-width: 1080px) {
   .advantage-list {
-    align-items: baseline;
-    flex-wrap: nowrap;
+    flex-direction: row;
 
-    &--item {
+    &--listitem {
       flex: 1;
 
       height: 350px;
+
+      margin: 0 0.5rem;
     }
   }
 }
