@@ -8,6 +8,7 @@
       class="instrument--icon"
       :src="require(`@/assets/imgs/instruments/${imageFileName}`)"
       :alt="instrumentType"
+      loading="lazy"
     />
   </li>
 </template>
@@ -59,17 +60,17 @@ export default {
 
 <style lang="scss" scoped>
 .instrument {
-  height: 100px;
-  width: 100px;
+  height: 85px;
+  width: 85px;
 
   margin: 1rem;
+
+  cursor: pointer;
 
   background-color: white;
   border-radius: 50%;
 
   transition: all 0.25s ease;
-
-  cursor: pointer;
 
   &--icon {
     height: 100%;

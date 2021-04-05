@@ -9,6 +9,7 @@
         v-if="info.link"
         :href="info.link.href"
         :title="info.link.title"
+        relation="author"
       >
       </AppAnchor>
     </li>

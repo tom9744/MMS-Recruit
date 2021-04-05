@@ -75,6 +75,52 @@ export default {
       ],
     }
   },
+
+  head() {
+    return {
+      title: '동국대학교 목멱성 | Recruit',
+
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            '동국대학교 밴드 음악 동아리 목멱성 신규회원 모집 전용 페이지입니다. 신규 회원 모집과 관련된 모든 정보를 얻을 수 있습니다.',
+        },
+        // SNS 공유 미리보기 관련 설정
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'website',
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://mms-dongguk.tk/recruit',
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: '동국대학교 목멱성',
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: '가입신청 | 목멱성 신규부원 모집 안내 및 지원',
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: 'https://mms-dongguk.tk/_nuxt/img/carousel_4.eaddd6e.jpeg',
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: '가입신청 | 목멱성 신규부원 모집 안내 및 지원',
+        },
+      ],
+    }
+  },
 }
 </script>
 
@@ -82,7 +128,7 @@ export default {
 .container {
   width: 100vw;
 
-  margin-top: 60px;
+  margin: 60px 0;
   padding: 0 5%;
 }
 
@@ -92,9 +138,6 @@ export default {
 
   display: flex;
   align-items: center;
-
-  &--text {
-  }
 }
 
 @media screen and (min-width: 780px) {
