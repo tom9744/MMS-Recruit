@@ -207,10 +207,41 @@ export default {
 
       meta: [
         {
-          hid: 'Home Page',
+          hid: 'description',
           name: 'description',
           content:
             '동국대학교 밴드 음악 동아리 목멱성 소개 페이지입니다. 목멱성의 연간 활동 일정과 연락처 등을 찾아볼 수 있습니다.',
+        },
+        // SNS 공유 미리보기 관련 설정
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'website',
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://mms-dongguk.tk',
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: '동국대학교 목멱성',
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: '홈페이지 | 목멱성 동아리 소개',
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: 'https://mms-dongguk.tk/_nuxt/img/carousel_4.eaddd6e.jpeg',
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: '홈페이지 | 목멱성 동아리 소개',
         },
       ],
     }
