@@ -1,6 +1,5 @@
 <template>
   <button class="recruit-button" @click="openGoogleForm">
-    <a href=""></a>
     <slot>지원하기</slot>
   </button>
 </template>
