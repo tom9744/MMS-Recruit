@@ -16,7 +16,7 @@ export default {
     return {
       observer: null,
       observerOption: {
-        threshold: 0.25,
+        threshold: 0,
       },
       isIntersecting: null,
     }
@@ -45,7 +45,6 @@ export default {
 
   border: 1px solid gray;
   border-radius: 16px;
-
   box-shadow: 0px 2px 6px -2px gray;
 
   opacity: 0;
@@ -57,13 +56,13 @@ export default {
   &__visible {
     opacity: 1;
 
-    animation: popIn 0.5s ease;
+    animation: popIn 0.5s ease forwards;
   }
 }
 
 @keyframes popIn {
   0% {
-    transform: scale(0);
+    transform: scale(0.5);
   }
   75% {
     transform: scale(1.05);
